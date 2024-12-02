@@ -13,7 +13,7 @@ import MarqueeSlider from '@/views/Home/component/MarqueeSlider.vue'
     <section
       class="container max-w-4xl mx-auto flex flex-col items-center gap-10 mt-32 sm:flex-row"
     >
-      <div class="flex flex-col items-center text-center lg:text-start">
+      <div class="flex flex-col items-center text-center lg:text-start lg:items-start">
         <h1 class="text-4xl font-bold mb-5">Kick-start your Branding!</h1>
         <p class="font-Poppins font-light mb-4 leading-loose md:leading-relaxed">
           Our agency specializes in developing comprehensive solutions to your backend and front-end
@@ -21,7 +21,7 @@ import MarqueeSlider from '@/views/Home/component/MarqueeSlider.vue'
           and/or services, helping you maximise profit as you convert sales like never before. 
         </p>
         <Button
-          class="bg-[#C90202] hover:bg-[#C90202]/65 font-Poppins font-light py-7 w-full lg:py-0 lg:w-0 text-lg"
+          class="bg-[#C90202] hover:bg-[#C90202]/65 font-Poppins font-light py-7 w-full lg:py-0 lg:w-fit text-lg"
           >Book a free consultation.</Button
         >
       </div>
@@ -57,7 +57,9 @@ import MarqueeSlider from '@/views/Home/component/MarqueeSlider.vue'
     <section
       class="container max-w-4xl mx-auto flex flex-col items-center gap-10 mt-32 sm:flex-row"
     >
-      <div class="max-w-2xl mx-auto flex items-start justify-center flex-col">
+      <div
+        class="max-w-2xl mx-auto flex items-center lg:items-start text-center lg:text-start justify-center flex-col"
+      >
         <h1 class="text-4xl max-w-sm leading-tight font-bold mb-5">
           Great interface for great interaction!
         </h1>
