@@ -58,7 +58,7 @@ import MarqueeSlider from '@/views/Home/component/MarqueeSlider.vue'
       class="container max-w-4xl mx-auto flex flex-col items-center gap-10 mt-32 sm:flex-row"
     >
       <div
-        class="max-w-2xl mx-auto flex items-center lg:items-start text-center lg:text-start justify-center flex-col"
+        class="max-w-2xl mx-auto flex items-center md:items-start text-center md:text-start justify-center flex-col"
       >
         <h1 class="text-4xl max-w-sm leading-tight font-bold mb-5">
           Great interface for great interaction!
