@@ -25,6 +25,12 @@ module.exports = {
       fontFamily: {
         Poppins: ['Poppins', 'sans-serif'],
       },
+      backgroundImage: {
+        homeHero: {
+          heroDesktop: 'url(/images/img_1.png)',
+          heroMobile: 'url(/images/img_12.png)',
+        },
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
