@@ -12,9 +12,9 @@ import { Button } from '@/components/ui/button'
       </div>
       <nav class="space-x-8 font-Poppins font-light">
         <router-link to="/">Home</router-link>
-        <router-link to="/about">Our services</router-link>
-        <router-link to="/career">Careers</router-link>
-        <router-link to="/about">Our portfolio</router-link>
+        <router-link to="/">Our services</router-link>
+        <router-link to="/about">Careers</router-link>
+        <router-link to="/portfolio">Our portfolio</router-link>
       </nav>
       <div>
         <Button class="bg-[#C90202] hover:bg-[#C90202]/65 text-white">Book us</Button>
