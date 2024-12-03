@@ -1,48 +1,57 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { computed, onMounted, onUnmounted, ref } from 'vue'
+
+interface Props {
+  desktopImage: string
+  mobileImage: string
+  // bar?: number
+}
+
+const props = defineProps<Props>()
+
+const isMobile = ref(false)
+
+const checkScreenSize = () => {
+  isMobile.value = window.innerWidth <= 640
+}
+
+onMounted(() => {
+  checkScreenSize()
+  window.addEventListener('resize', checkScreenSize)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', checkScreenSize)
+})
+
+const imageSrc = computed(() => (isMobile.value ? props.desktopImage : props.mobileImage))
+</script>
 
 <template>
-  <div class="">
-    <figure class="relative">
-      <div
-        class="absolute max-w-4xl top-20 mx-auto md:mt-[5.98rem] md:ml-[6.76rem] md:top-0 lg:mt-[11.98rem] lg:left-44"
-      >
-        <h1 class="text-6xl md:text-8xl mb-3 text-center md:text-start font-bold">Innovate</h1>
-        <p class="font-Poppins max-w-sm leading-normal text-center md:text-start">
-          Creating Digital Experiences that Inspire.  Creativity meets technical precision
-        </p>
+  <div class="hero h-[100vh] bg-cover bg-center bg-[url('/images/img.png')]">
+    <div class="container max-w-4xl mx-auto text-center sm:text-center md:text-start pt-32 mb-5">
+      <h1 class="text-4xl sm:text-6xl md:text-8xl mb-2">Innovation</h1>
+      <p class="max-w-full sm:max-w-full md:max-w-sm font-Poppins font-light">
+        Creating Digital Experiences that Inspire.  Creativity meets technical precision
+      </p>
+    </div>
+
+    <div class="relative">
+      <figure class="w-full">
+        <img :src="imageSrc" alt="3D virtual assistance" />
+      </figure>
+
+      <div class="absolute -top-12 right-0 md:-top-28 lg:-top-48">
+        <img alt="" class="w-20 md:w-48 lg:w-full" src="/images/img_2.png" />
       </div>
-
-      <!--   mobile view   -->
-      <figure class="block md:hidden">
-        <img alt="" class="w-full h-[55vh]" src="/images/img_11.png" />
-      </figure>
-      <!--   mobile view   -->
-
-      <!--      desktop view-->
-      <figure class="hidden md:block">
-        <img alt="" class="w-full md:h-[25vh] lg:h-[55vh]" src="/images/img.png" />
-      </figure>
-      <!--      desktop view-->
-
-      <figure
-        class="absolute mt-[18.98rem] top-0 right-0 md:right-0 md:mt-[5rem] lg:right-0 lg:top-0 lg:mt-[11.98rem]"
-      >
-        <img alt="" class="w-28 md:w-[100%] lg:w-full" src="/images/img_2.png" />
-      </figure>
-
-      <!--   mobile view   -->
-      <figure class="block md:hidden">
-        <img alt="" class="" src="/images/img_12.png" />
-      </figure>
-      <!--   mobile view   -->
-
-      <!--    tablet and desktop  -->
-      <figure class="hidden md:block">
-        <img alt="" src="/images/img_1.png" />
-      </figure>
-      <!--    tablet and desktop  -->
-    </figure>
+    </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row: auto;
+}
+</style>

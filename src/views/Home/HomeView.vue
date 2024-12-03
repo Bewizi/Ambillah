@@ -7,7 +7,7 @@ import MarqueeSlider from '@/views/Home/component/MarqueeSlider.vue'
 
 <template>
   <main class="min-h-screen">
-    <HomeHero />
+    <HomeHero desktopImage="/images/img_12.png" mobileImage="/images/img_1.png" />
 
     <!--  Company Brand  -->
     <section
@@ -54,28 +54,28 @@ import MarqueeSlider from '@/views/Home/component/MarqueeSlider.vue'
     <!--  Services  -->
 
     <!--  CTA  -->
-    <section
-      class="container max-w-4xl mx-auto flex flex-col items-center gap-10 mt-32 sm:flex-row"
-    >
-      <div
-        class="max-w-2xl mx-auto flex items-center md:items-start text-center md:text-start justify-center flex-col"
-      >
-        <h1 class="text-4xl max-w-sm leading-tight font-bold mb-5">
-          Great interface for great interaction!
-        </h1>
-        <p class="font-Poppins font-light mb-12 leading-relaxed">
-          With Ambillah, create a great interface to drive great interactions, leading to
-          conversions. How do you want your site to shine?
-        </p>
-        <Button
-          class="bg-transparent hover:bg-transparent border border-white font-Poppins font-light"
+    <section class="container max-w-7xl mx-auto bg-[#141414]">
+      <div class="flex flex-col items-center gap-10 mt-32 sm:flex-row">
+        <div
+          class="max-w-2xl mx-auto flex items-center md:items-start text-center md:text-start justify-center flex-col"
         >
-          Book a free consultation.
-        </Button>
+          <h1 class="text-4xl max-w-sm leading-tight font-bold mb-5">
+            Great interface for great interaction!
+          </h1>
+          <p class="font-Poppins font-light mb-12 leading-relaxed">
+            With Ambillah, create a great interface to drive great interactions, leading to
+            conversions. How do you want your site to shine?
+          </p>
+          <Button
+            class="bg-transparent hover:bg-transparent border border-white font-Poppins font-light"
+          >
+            Book a free consultation.
+          </Button>
+        </div>
+        <figure>
+          <img alt="" src="/images/img_9.png" />
+        </figure>
       </div>
-      <figure>
-        <img alt="" src="/images/img_9.png" />
-      </figure>
     </section>
     <!--  CTA  -->
 
