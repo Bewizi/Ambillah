@@ -8,9 +8,9 @@
           </figure>
         </div>
         <nav class="font-Poppins text-lg space-x-5 font-normal">
-          <router-link to="">About</router-link>
+          <router-link to="/about">About</router-link>
           <router-link to="">Careers</router-link>
-          <router-link to="">Portfoilo</router-link>
+          <router-link to="/portfolio">Portfoilo</router-link>
         </nav>
       </section>
       <hr class="mt-10" />
