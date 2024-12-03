@@ -15,7 +15,9 @@ const toggleNavbar = () => {
       <section class="max-w-4xl mx-auto flex items-center justify-between md:px-4 py-4">
         <div>
           <figure>
-            <img alt="" src="/images/img_10.png" />
+            <router-link to="/">
+              <img alt="Logo" src="/images/img_10.png" />
+            </router-link>
           </figure>
         </div>
 
