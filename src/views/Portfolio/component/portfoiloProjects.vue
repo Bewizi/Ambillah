@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import VLazyImage from 'v-lazy-image'
 import { Card } from '@/components/ui/card'
 
 const projectImage = [
@@ -25,7 +26,7 @@ const projectImage = [
     <div class="flex flex-col gap-8">
       <Card v-for="(items, index) in projectImage" :key="index" class="bg-transparent border-none">
         <figure>
-          <img :src="items.image" alt="" class="rounded-lg" />
+          <v-lazy-image :src="items.image" alt="" class="rounded-lg" loading="lazy" />
         </figure>
       </Card>
     </div>
