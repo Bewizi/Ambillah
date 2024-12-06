@@ -10,21 +10,41 @@ interface Props {
 const props = defineProps<Props>()
 
 const isMobile = ref(false)
+const isIntersecting = ref(false)
+const lazyImageSrc = ref('')
 
 const checkScreenSize = () => {
   isMobile.value = window.innerWidth <= 640
 }
 
+const imageSrc = computed(() => (isMobile.value ? props.desktopImage : props.mobileImage))
+
+const observeElement = (element: Element | null) => {
+  if (!element) return
+
+  const observer = new IntersectionObserver(
+    ([entries]) => {
+      if (entries.isIntersecting) {
+        isIntersecting.value = true
+        observer.disconnect()
+      }
+    },
+    { rootMargin: '50px' },
+  )
+  observer.observe(element)
+}
+
 onMounted(() => {
   checkScreenSize()
   window.addEventListener('resize', checkScreenSize)
+
+  const lazyImageElement = document.querySelector('#lazyImage')
+  observeElement(lazyImageElement)
 })
 
 onUnmounted(() => {
   window.removeEventListener('resize', checkScreenSize)
 })
-
-const imageSrc = computed(() => (isMobile.value ? props.desktopImage : props.mobileImage))
 </script>
 
 <template>
@@ -38,7 +58,12 @@ const imageSrc = computed(() => (isMobile.value ? props.desktopImage : props.mob
 
     <div class="relative">
       <figure class="w-full">
-        <img :src="imageSrc" alt="3D virtual assistance" />
+        <img
+          id="lazyImage"
+          :src="isIntersecting ? imageSrc : ''"
+          alt="3D virtual assistance"
+          loading="lazy"
+        />
       </figure>
 
       <div class="absolute -top-12 right-0 md:-top-28 lg:-top-48">
