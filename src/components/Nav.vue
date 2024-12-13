@@ -16,7 +16,7 @@ const toggleNavbar = () => {
         <div>
           <figure>
             <router-link to="/">
-              <img alt="Logo" src="/images/img_10.png" />
+              <img alt="Logo" src="/images/logo.png" />
             </router-link>
           </figure>
         </div>
@@ -38,7 +38,7 @@ const toggleNavbar = () => {
       <section class="flex items-center justify-between px-4 py-4">
         <div>
           <figure>
-            <img alt="" src="/images/img_10.png" />
+            <img alt="" src="/images/logo.png" />
           </figure>
         </div>
 
