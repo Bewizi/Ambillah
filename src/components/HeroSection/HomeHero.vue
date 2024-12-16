@@ -58,12 +58,7 @@ onUnmounted(() => {
 
     <div class="relative">
       <figure class="w-full">
-        <img
-          id="lazyImage"
-          :src="isIntersecting ? imageSrc : ''"
-          alt="3D virtual assistance"
-          loading="lazy"
-        />
+        <img :src="imageSrc" alt="3D virtual assistance" />
       </figure>
 
       <div class="absolute -top-12 right-28 md:-top-28 lg:-top-28">

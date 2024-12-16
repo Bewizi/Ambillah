@@ -25,7 +25,7 @@ const handleClick = (title: string) => {
       />
     </div>
     <div class="flex items-center justify-center mt-10">
-      <Button class="bg-[#C90202] hover:bg-[#C90202]/65 font-Poppins font-light px-10 py-5"
+      <Button class="bg-[#C90202] hover:bg-[#C90202]/65 font-Poppins font-light px-10 py-6"
         >Book us now</Button
       >
     </div>
@@ -34,7 +34,7 @@ const handleClick = (title: string) => {
   <div class="block lg:hidden">
     <Dropdown :service="services" class="w-full" />
     <div class="flex items-center justify-center mt-5">
-      <Button class="bg-[#C90202] hover:bg-[#C90202]/65 font-Poppins font-light px-10 py-5"
+      <Button class="bg-[#C90202] hover:bg-[#C90202]/65 font-Poppins font-light px-10 py-8"
         >Book us now</Button
       >
     </div>
