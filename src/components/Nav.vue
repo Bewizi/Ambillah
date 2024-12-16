@@ -32,7 +32,7 @@ const getActiveLink = (route: string) => {
         <div>
           <figure>
             <router-link to="/">
-              <img alt="Logo" src="/images/img_10.png" />
+              <img alt="Logo" src="/images/logo.png" />
             </router-link>
           </figure>
         </div>
@@ -69,7 +69,7 @@ const getActiveLink = (route: string) => {
       <section class="flex items-center justify-between px-4 py-4">
         <div>
           <figure>
-            <img alt="" src="/images/img_10.png" />
+            <img alt="" src="/images/logo.png" />
           </figure>
         </div>
 
@@ -97,21 +97,6 @@ const getActiveLink = (route: string) => {
       </section>
     </div>
   </header>
-
-  <main>
-    <Transition name="fade">
-      <component :is="show" key="isActive" />
-    </Transition>
-  </main>
 </template>
 
-<style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>
+<style scoped></style>

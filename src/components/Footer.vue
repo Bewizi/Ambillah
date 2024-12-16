@@ -4,7 +4,7 @@
       <section class="flex flex-col items-center justify-center">
         <div class="mb-5">
           <figure>
-            <img alt="" src="/images/img_10.png" />
+            <img alt="" src="/images/logo.png" />
           </figure>
         </div>
         <nav class="font-Poppins text-lg space-x-5 font-normal">

@@ -37,7 +37,7 @@ onMounted(() => {
 
     <!--  Company Brand  -->
     <section
-      class="container max-w-4xl mx-auto flex flex-col items-center gap-10 mt-32 sm:flex-row"
+      class="container max-w-4xl mx-auto flex flex-col items-center gap-10 mt-40 sm:flex-row"
     >
       <div class="flex flex-col items-center text-center lg:text-start lg:items-start">
         <h1 class="text-4xl font-bold mb-5">Kick-start your Branding!</h1>
@@ -47,18 +47,18 @@ onMounted(() => {
           and/or services, helping you maximise profit as you convert sales like never before. 
         </p>
         <Button
-          class="bg-[#C90202] hover:bg-[#C90202]/65 font-Poppins font-light py-7 w-full lg:py-0 lg:w-fit text-lg"
+          class="bg-[#C90202] hover:bg-[#C90202]/65 font-Poppins font-light py-7 w-full lg:py-8 lg:w-fit text-lg"
           >Book a free consultation.</Button
         >
       </div>
       <figure class="hidden lg:block">
-        <img alt="" data-src="/images/img_3.png" width="1800px" />
+        <img alt="" src="/images/img_3.png" width="1800px" />
       </figure>
     </section>
     <!--  Company Brand  -->
 
     <!--  Projects  -->
-    <section class="container max-w-7xl mx-auto mt-32">
+    <section class="container max-w-7xl mx-auto mt-40">
       <div class="max-w-2xl mx-auto flex items-center justify-center flex-col text-center">
         <h1 class="text-3xl lg:text-4xl lg:max-w-sm leading-tight font-bold mb-5">
           Designs with finesse, We make it impress!
@@ -70,7 +70,7 @@ onMounted(() => {
         </p>
       </div>
       <figure>
-        <img alt="" data-src="/images/img_4.png" />
+        <img alt="" src="/images/img_4.png" />
       </figure>
     </section>
     <!--  Projects  -->
@@ -99,7 +99,7 @@ onMounted(() => {
           </Button>
         </div>
         <figure>
-          <img alt="" data-src="/images/img_9.png" />
+          <img alt="" src="/images/img_9.png" />
         </figure>
       </div>
     </section>
