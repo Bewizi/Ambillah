@@ -3,6 +3,32 @@ import HomeHero from '@/components/HeroSection/HomeHero.vue'
 import { Button } from '@/components/ui/button'
 import ServiceSection from '@/components/services/ServiceSection.vue'
 import MarqueeSlider from '@/views/Home/component/MarqueeSlider.vue'
+import { onMounted } from 'vue'
+
+const lazyLoadImages = () => {
+  const images = document.querySelectorAll('[data-src]')
+
+  const observer = new IntersectionObserver(
+    (entries, observerInstance) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement
+          img.src = img.dataset.src || ''
+          img.removeAttribute('data-src')
+          observerInstance.unobserve(img)
+        }
+      })
+    },
+    {
+      rootMargin: '50px',
+    },
+  )
+  images.forEach((img) => observer.observe(img))
+}
+
+onMounted(() => {
+  lazyLoadImages()
+})
 </script>
 
 <template>
@@ -26,7 +52,7 @@ import MarqueeSlider from '@/views/Home/component/MarqueeSlider.vue'
         >
       </div>
       <figure class="hidden lg:block">
-        <img alt="" src="/images/img_3.png" width="1800px" />
+        <img alt="" data-src="/images/img_3.png" width="1800px" />
       </figure>
     </section>
     <!--  Company Brand  -->
@@ -44,7 +70,7 @@ import MarqueeSlider from '@/views/Home/component/MarqueeSlider.vue'
         </p>
       </div>
       <figure>
-        <img alt="" src="/images/img_4.png" />
+        <img alt="" data-src="/images/img_4.png" />
       </figure>
     </section>
     <!--  Projects  -->
@@ -73,7 +99,7 @@ import MarqueeSlider from '@/views/Home/component/MarqueeSlider.vue'
           </Button>
         </div>
         <figure>
-          <img alt="" src="/images/img_9.png" />
+          <img alt="" data-src="/images/img_9.png" />
         </figure>
       </div>
     </section>
