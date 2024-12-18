@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import ServiceSection from '@/components/services/ServiceSection.vue'
 import MarqueeSlider from '@/views/Home/component/MarqueeSlider.vue'
 import { onMounted } from 'vue'
+import { Vue3Marquee } from 'vue3-marquee'
 
 const lazyLoadImages = () => {
   const images = document.querySelectorAll('[data-src]')
@@ -69,9 +70,13 @@ onMounted(() => {
           identity with AMBILLAH
         </p>
       </div>
-      <figure>
-        <img alt="" src="/images/img_4.png" />
-      </figure>
+      <div>
+        <Vue3Marquee>
+          <figure>
+            <img alt="" src="/images/img_4.png" />
+          </figure>
+        </Vue3Marquee>
+      </div>
     </section>
     <!--  Projects  -->
 
