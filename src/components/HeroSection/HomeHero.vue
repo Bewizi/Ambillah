@@ -55,7 +55,7 @@ const cycleText = () => {
 }
 
 onMounted(() => {
-  interval = setInterval(cycleText, 5000)
+  interval = window.setInterval(cycleText, 5000)
 })
 
 onUnmounted(() => {
