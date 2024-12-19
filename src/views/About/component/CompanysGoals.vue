@@ -31,18 +31,26 @@ const array = [
 </script>
 
 <template>
-  <section class="max-w-4xl mx-auto mt-32 px-5 sm:px-8 lg:px-0">
+  <section class="max-w-4xl mx-auto mt-20 md:mt-48 px-5 sm:px-8 lg:px-0">
     <div class="grid place-items-center">
-      <h1 class="font-bold lg:text-6xl mb-10">Why Work With Us?</h1>
+      <h1
+        class="font-semibold text-4xl leading-normal text-center mb-8 md:text-6xl lg:leading-tight md:mb-10 lg:mb-14"
+      >
+        Why Work With Us?
+      </h1>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-y-5 lg:grid-cols-3 md:gap-x-12 md:gap-y-4 lg:gap-y-8"
+      >
         <Card
           v-for="(item, index) in array"
           :key="index"
-          class="border-2 border-[#1E1E1E] bg-[#0A0A0A] text-white text-center min-h-[50vh] grid place-content-center px-5"
+          class="border-2 border-[#1E1E1E] bg-[#0A0A0A] text-white text-center py-8 md:min-h-[40vh] lg:min-h-[50vh] grid place-content-center px-5"
         >
-          <h2 class="font-bold text-2xl md:text-4xl lg:text-4xl mb-5">{{ item.mainHeader }}</h2>
-          <p class="font-light font-Poppins">{{ item.mainText }}</p>
+          <h2 class="font-medium text-4xl lg:text-4xl mb-5 leading-relaxed lg:leading-tight">
+            {{ item.mainHeader }}
+          </h2>
+          <p class="font-light font-Poppins leading-loose">{{ item.mainText }}</p>
         </Card>
       </div>
     </div>
