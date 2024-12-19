@@ -66,9 +66,9 @@ onUnmounted(() => {
 <template>
   <div class="hero h-[100vh] bg-cover bg-center bg-[url('/images/img.png')]">
     <div class="container max-w-4xl mx-auto text-center sm:text-center md:text-start pt-32 mb-5">
-      <div class="text-container overflow-hidden h-[50px] md:h-[100px] relative">
+      <div class="text-container overflow-hidden h-[60px] md:h-[100px] relative">
         <transition mode="out-in" name="slide-vertical">
-          <h1 :key="currentIndex" class="text-4xl sm:text-6xl md:text-8xl font-bold">
+          <h1 :key="currentIndex" class="text-5xl sm:text-6xl md:text-8xl font-bold">
             {{ headerOneText[currentIndex] }}
           </h1>
         </transition>

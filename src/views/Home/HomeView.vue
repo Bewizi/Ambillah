@@ -38,7 +38,7 @@ onMounted(() => {
 
     <!--  Company Brand  -->
     <section
-      class="container max-w-4xl mx-auto flex flex-col items-center gap-10 mt-40 sm:flex-row"
+      class="container max-w-4xl mx-auto flex flex-col items-center mt-20 gap-10 md:mt-32 lg:mt-40 sm:flex-row"
     >
       <div class="flex flex-col items-center text-center lg:text-start lg:items-start">
         <h1 class="text-4xl font-bold mb-5">Kick-start your Branding!</h1>
@@ -59,12 +59,12 @@ onMounted(() => {
     <!--  Company Brand  -->
 
     <!--  Projects  -->
-    <section class="container max-w-7xl mx-auto mt-40">
-      <div class="max-w-2xl mx-auto flex items-center justify-center flex-col text-center">
+    <section class="container max-w-7xl mx-auto mt-28 md:mt-32 lg:mt-40">
+      <div class="max-w-2xl mx-auto flex items-center justify-center flex-col text-center mb-8">
         <h1 class="text-3xl lg:text-4xl lg:max-w-sm leading-tight font-bold mb-5">
           Designs with finesse, We make it impress!
         </h1>
-        <p class="font-Poppins font-light mb-4 leading-relaxed">
+        <p class="font-Poppins font-light leading-relaxed">
           Design with Ambillah. We’ll take your users from a great first impression up until
           purchase. We transform first impressions into lasting conversions. Build a strong brand
           identity with AMBILLAH

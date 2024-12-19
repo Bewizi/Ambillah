@@ -17,7 +17,9 @@ const helloArray = ['Evolve', 'Evolve', 'Evolve', 'Evolve', 'Evolve', 'Evolve']
   <section class="max-w-4xl mx-auto mt-32 md:px-8 lg:px-8">
     <div class="linear">
       <div class="flex flex-col items-center justify-center font-Poppins">
-        <h2 class="text-4xl font-bold mb-10 text-center">Reimagine Your Brand's Future</h2>
+        <h2 class="text-4xl font-bold mb-10 text-center leading-relaxed">
+          Reimagine Your Brand's Future
+        </h2>
         <Button class="bg-[#C90202] hover:bg-[#C90202]/65 py-6">Book a free consultation</Button>
       </div>
     </div>
