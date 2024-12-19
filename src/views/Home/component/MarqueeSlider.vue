@@ -18,7 +18,7 @@ const helloArray = ['Evolve', 'Evolve', 'Evolve', 'Evolve', 'Evolve', 'Evolve']
     <div class="linear">
       <div class="flex flex-col items-center justify-center font-Poppins">
         <h2 class="text-4xl font-bold mb-10 text-center">Reimagine Your Brand's Future</h2>
-        <Button class="bg-[#C90202] hover:bg-[#C90202]/65">Book a free consultation</Button>
+        <Button class="bg-[#C90202] hover:bg-[#C90202]/65 py-6">Book a free consultation</Button>
       </div>
     </div>
   </section>

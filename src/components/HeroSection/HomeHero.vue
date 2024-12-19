@@ -10,27 +10,69 @@ interface Props {
 const props = defineProps<Props>()
 
 const isMobile = ref(false)
+const isIntersecting = ref(false)
+const lazyImageSrc = ref('')
 
 const checkScreenSize = () => {
   isMobile.value = window.innerWidth <= 640
 }
 
+const imageSrc = computed(() => (isMobile.value ? props.desktopImage : props.mobileImage))
+
+const observeElement = (element: Element | null) => {
+  if (!element) return
+
+  const observer = new IntersectionObserver(
+    ([entries]) => {
+      if (entries.isIntersecting) {
+        isIntersecting.value = true
+        observer.disconnect()
+      }
+    },
+    { rootMargin: '50px' },
+  )
+  observer.observe(element)
+}
+
 onMounted(() => {
   checkScreenSize()
   window.addEventListener('resize', checkScreenSize)
+
+  const lazyImageElement = document.querySelector('#lazyImage')
+  observeElement(lazyImageElement)
 })
 
 onUnmounted(() => {
   window.removeEventListener('resize', checkScreenSize)
 })
 
-const imageSrc = computed(() => (isMobile.value ? props.desktopImage : props.mobileImage))
+const headerOneText = ['Innovation', 'Build', 'Deliver']
+const currentIndex = ref(0)
+let interval: number | undefined
+
+const cycleText = () => {
+  currentIndex.value = (currentIndex.value + 1) % headerOneText.length
+}
+
+onMounted(() => {
+  interval = window.setInterval(cycleText, 5000)
+})
+
+onUnmounted(() => {
+  clearInterval(interval)
+})
 </script>
 
 <template>
   <div class="hero h-[100vh] bg-cover bg-center bg-[url('/images/img.png')]">
     <div class="container max-w-4xl mx-auto text-center sm:text-center md:text-start pt-32 mb-5">
-      <h1 class="text-4xl sm:text-6xl md:text-8xl mb-2">Innovation</h1>
+      <div class="text-container overflow-hidden h-[50px] md:h-[100px] relative">
+        <transition mode="out-in" name="slide-vertical">
+          <h1 :key="currentIndex" class="text-4xl sm:text-6xl md:text-8xl font-bold">
+            {{ headerOneText[currentIndex] }}
+          </h1>
+        </transition>
+      </div>
       <p class="max-w-full sm:max-w-full md:max-w-sm font-Poppins font-light">
         Creating Digital Experiences that Inspire.  Creativity meets technical precision
       </p>
@@ -41,8 +83,8 @@ const imageSrc = computed(() => (isMobile.value ? props.desktopImage : props.mob
         <img :src="imageSrc" alt="3D virtual assistance" />
       </figure>
 
-      <div class="absolute -top-12 right-0 md:-top-28 lg:-top-48">
-        <img alt="" class="w-20 md:w-48 lg:w-full" src="/images/img_2.png" />
+      <div class="absolute -top-12 right-0 md:right-8 lg:right-28 md:-top-28 lg:-top-28">
+        <img alt="" class="w-20 md:w-48 lg:w-48" src="/images/img_2.png" />
       </div>
     </div>
   </div>
@@ -53,5 +95,22 @@ const imageSrc = computed(() => (isMobile.value ? props.desktopImage : props.mob
   display: grid;
   grid-template-columns: 1fr;
   grid-row: auto;
+}
+
+.slide-vertical-enter-active,
+.slide-vertical-leave-active {
+  transition:
+    transform 0.5s ease-in-out,
+    opacity 0.5s ease-in-out;
+}
+
+.slide-vertical-enter-from {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.slide-vertical-leave-to {
+  transform: translateY(-100%);
+  opacity: 0;
 }
 </style>
