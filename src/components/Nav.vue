@@ -20,34 +20,13 @@ const getActiveLink = (route: string) => {
     : ''
 }
 
-// let observer: IntersectionObserver | null = null
-
-// const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-//   isSticky.value = !entries[0].isIntersecting
-// }
-//
-// onMounted(() => {
-//   observer = new IntersectionObserver(handleIntersection, {
-//     root: null,
-//     threshold: 0.1,
-//   })
-//
-//   const target = document.querySelector('header')
-//   if (target) observer.observe(target)
-// })
-// onUnmounted(() => {
-//   if (observer) {
-//     observer.disconnect()
-//   }
-// })
-
 onMounted(() => {
   const sentinel = document.querySelector('#sentinel-header')
   const obsever = new IntersectionObserver(
     ([entries]) => {
       isSticky.value = !entries.isIntersecting
     },
-    { root: null, threshold: 0.1 },
+    { threshold: 0.1 },
   )
   if (sentinel) {
     obsever.observe(sentinel)
