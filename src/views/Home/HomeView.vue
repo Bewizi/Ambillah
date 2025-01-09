@@ -22,6 +22,7 @@ const lazyLoadImages = () => {
     },
     {
       rootMargin: '50px',
+      threshold: 0.5,
     },
   )
   images.forEach((img) => observer.observe(img))
@@ -53,7 +54,13 @@ onMounted(() => {
         >
       </div>
       <figure class="hidden lg:block">
-        <img alt="" src="/images/img_3.png" width="1800px" />
+        <img
+          alt=""
+          class="lazy-img"
+          data-src="/images/img_3.png"
+          src="/images/img_3.png"
+          width="1800px"
+        />
       </figure>
     </section>
     <!--  Company Brand  -->
@@ -113,3 +120,5 @@ onMounted(() => {
     <MarqueeSlider />
   </main>
 </template>
+
+<style scoped></style>

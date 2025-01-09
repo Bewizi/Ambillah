@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { Vue3Marquee } from 'vue3-marquee'
 import { Button } from '@/components/ui/button'
 
 const helloArray = ['Evolve', 'Evolve', 'Evolve', 'Evolve', 'Evolve', 'Evolve']
@@ -7,11 +6,17 @@ const helloArray = ['Evolve', 'Evolve', 'Evolve', 'Evolve', 'Evolve', 'Evolve']
 
 <template>
   <div class="container max-w-7xl mx-auto mt-32 px-5 md:px-8 h-0">
-    <Vue3Marquee>
-      <span v-for="(word, index) in helloArray" :key="index" class="mr-12 text-6xl">
-        {{ word }}
-      </span>
-    </Vue3Marquee>
+    <div class="h-[100px] overflow-hidden">
+      <div class="flex slide-content">
+        <span
+          v-for="(word, index) in helloArray.concat(helloArray)"
+          :key="index"
+          class="mr-12 text-6xl"
+        >
+          {{ word }}
+        </span>
+      </div>
+    </div>
   </div>
 
   <section class="max-w-4xl mx-auto mt-32 md:px-8 lg:px-8">
@@ -40,5 +45,20 @@ const helloArray = ['Evolve', 'Evolve', 'Evolve', 'Evolve', 'Evolve', 'Evolve']
   background: #141414;
   border-radius: 6px;
   padding: 5rem 0;
+}
+
+.slide-content {
+  animation: slide 10s infinite linear;
+  white-space: nowrap;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 </style>
