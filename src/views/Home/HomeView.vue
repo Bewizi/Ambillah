@@ -39,7 +39,7 @@ onMounted(() => {
 
     <!--  Company Brand  -->
     <section
-      class="container max-w-4xl mx-auto flex flex-col items-center mt-20 gap-10 md:mt-32 lg:mt-40 sm:flex-row"
+      class="container max-w-4xl mx-auto flex flex-col items-center mt-20 gap-10 md:mt-32 lg:mt-40 sm:flex-row py-24"
     >
       <div class="flex flex-col items-center text-center lg:text-start lg:items-start">
         <h1 class="text-4xl font-bold mb-5">Kick-start your Branding!</h1>
