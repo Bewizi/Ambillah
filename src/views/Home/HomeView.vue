@@ -88,7 +88,7 @@ onMounted(() => {
     <!--  Projects  -->
 
     <!--  Services  -->
-    <ServiceSection />
+    <ServiceSection id="services" />
     <!--  Services  -->
 
     <!--  CTA  -->

@@ -60,7 +60,12 @@ onMounted(() => {
             <router-link :class="getActiveLink('Home')" to="/" @click="updateActive('Home')"
               >Home
             </router-link>
-            <router-link to="/">Our services</router-link>
+            <router-link
+              :to="{ path: '/', hash: '#services' }"
+              @click="updateActive('OurServices')"
+            >
+              Our services
+            </router-link>
             <router-link
               :class="getActiveLink('Careers')"
               to="/about"
