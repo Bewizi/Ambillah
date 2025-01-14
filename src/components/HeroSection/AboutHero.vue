@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
     <div class="max-w-4xl mx-auto px-5 lg:px-0">
       <div class="flex flex-col items-center justify-center text-center h-[100vh]">
         <h1
-          class="text-4xl mb-4 md:text-6xl lg:text-7xl font-bold leading-normal md:leading-relaxed lg:leading-tight lg:mb-0"
+          class="text-4xl mb-4 md:text-6xl lg:text-7xl font-bold font-Raleway leading-normal md:leading-relaxed lg:leading-tight lg:mb-0"
         >
           Join our team of <br />
           creatives and innovators
