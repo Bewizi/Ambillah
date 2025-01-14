@@ -14,7 +14,9 @@ const handleClick = (title: string) => {
 
 <template>
   <section id="services" class="max-w-7xl mx-auto py-16 px-5 lg:px-8 mt-32 hidden lg:block">
-    <h2 id="services" class="text-4xl font-bold text-center mb-12 text-white">Our Services</h2>
+    <h2 id="services" class="text-4xl font-bold text-center mb-12 text-white font-Raleway">
+      Our Services
+    </h2>
     <div class="flex flex-col md:flex-row gap-8 max-w-7xl mx-auto">
       <ServiceCard
         v-for="service in services"
