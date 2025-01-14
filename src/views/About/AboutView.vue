@@ -9,7 +9,7 @@
       <div
         class="flex flex-col items-center text-center md:items-start md:text-start lg:items-start"
       >
-        <h1 class="text-5xl font-bold mb-5">About us</h1>
+        <h1 class="text-5xl font-Raleway font-bold mb-5">About us</h1>
         <p class="font-Poppins font-light mb-4 leading-loose md:leading-relaxed">
           At Ambillah, we are driven by a passion for technology and innovation. Our mission is to
           build cutting-edge tech products that transform businesses and enhance user experiences.
