@@ -24,6 +24,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Poppins: ['Poppins', 'sans-serif'],
+        Raleway: ['Raleway', 'sans-serif'],
       },
       backgroundImage: {
         homeHero: {

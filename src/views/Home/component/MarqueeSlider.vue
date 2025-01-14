@@ -11,7 +11,7 @@ const helloArray = ['Evolve', 'Evolve', 'Evolve', 'Evolve', 'Evolve', 'Evolve']
         <span
           v-for="(word, index) in helloArray.concat(helloArray)"
           :key="index"
-          class="mr-12 text-6xl"
+          class="mr-12 text-6xl font-Raleway"
         >
           {{ word }}
         </span>
