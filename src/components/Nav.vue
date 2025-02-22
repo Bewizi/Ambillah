@@ -81,7 +81,15 @@ onMounted(() => {
           </nav>
 
           <div>
-            <Button class="bg-[#C90202] hover:bg-[#C90202]/65 text-white py-5">Book us</Button>
+            <Button class="bg-[#C90202] hover:bg-[#C90202]/65 text-white py-5">
+              <a
+                href="https://forms.gle/RRYYKr4jBF7uyz3Y8"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Book us
+              </a>
+            </Button>
           </div>
         </section>
       </div>
