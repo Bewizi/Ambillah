@@ -3,24 +3,16 @@ import { Card } from '@/components/ui/card'
 
 const projectImage = [
   {
-    image: '/images/img_16.png',
-    text: 'Project One',
+    image: '/images/Brand_Indentity.png',
+    text: 'Brand Identity Design',
   },
   {
-    image: '/images/img_17.png',
-    text: 'Project Two',
+    image: '/images/AI-Generated-Image.png',
+    text: 'Telegram AI \n' + 'Image Generator',
   },
   {
-    image: '/images/img_18.png',
-    text: 'Project Three',
-  },
-  {
-    image: '/images/img_19.png',
-    text: 'Project Four',
-  },
-  {
-    image: '/images/img_20.png',
-    text: 'Project Five',
+    image: '/images/Brand_Design.png',
+    text: 'Brand Design',
   },
 ]
 </script>
