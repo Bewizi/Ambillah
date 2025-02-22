@@ -16,9 +16,11 @@ import { Button } from '@/components/ui/button'
           We are driven by a passion for technology and innovation
         </p>
         <div class="flex items-center justify-center mt-5">
-          <Button class="bg-[#C90202] hover:bg-[#C90202]/65 font-Poppins font-light px-10 py-7"
-            >Join our team</Button
-          >
+          <Button class="bg-[#C90202] hover:bg-[#C90202]/65 font-Poppins font-light px-10 py-7">
+            <a href="https://forms.gle/9RmGTWynjaDXm9tE6" rel="noopener noreferrer" target="_blank">
+              Join our team
+            </a>
+          </Button>
         </div>
       </div>
     </div>
