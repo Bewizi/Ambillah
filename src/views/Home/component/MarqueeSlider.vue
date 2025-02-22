@@ -25,7 +25,11 @@ const helloArray = ['Evolve', 'Evolve', 'Evolve', 'Evolve', 'Evolve', 'Evolve']
         <h2 class="text-4xl font-bold mb-10 text-center leading-relaxed">
           Reimagine Your Brand's Future
         </h2>
-        <Button class="bg-[#C90202] hover:bg-[#C90202]/65 py-6">Book a free consultation</Button>
+        <Button class="bg-[#C90202] hover:bg-[#C90202]/65 py-6">
+          <a href="https://forms.gle/RRYYKr4jBF7uyz3Y8" rel="noopener noreferrer" target="_blank">
+            Book a free consultation.
+          </a>
+        </Button>
       </div>
     </div>
   </section>

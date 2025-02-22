@@ -110,7 +110,9 @@ onMounted(() => {
           <Button
             class="bg-transparent hover:bg-transparent border border-white font-Poppins font-light"
           >
-            Book a free consultation.
+            <a href="https://forms.gle/RRYYKr4jBF7uyz3Y8" rel="noopener noreferrer" target="_blank">
+              Book a free consultation.
+            </a>
           </Button>
         </div>
         <figure>

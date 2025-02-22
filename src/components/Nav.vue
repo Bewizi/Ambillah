@@ -104,7 +104,15 @@ onMounted(() => {
 
           <section class="flex items-center gap-5">
             <div>
-              <Button class="bg-[#C90202] hover:bg-[#C90202]/65 text-white">Book us</Button>
+              <Button class="bg-[#C90202] hover:bg-[#C90202]/65 text-white">
+                <a
+                  href="https://forms.gle/RRYYKr4jBF7uyz3Y8"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Book us
+                </a>
+              </Button>
             </div>
             <!--  icon -->
             <div class="flex items-center">
