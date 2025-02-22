@@ -50,8 +50,11 @@ onMounted(() => {
         </p>
         <Button
           class="bg-[#C90202] hover:bg-[#C90202]/65 font-Poppins font-light py-7 w-full lg:py-8 lg:w-fit text-lg"
-          >Book a free consultation.</Button
         >
+          <a href="https://forms.gle/RRYYKr4jBF7uyz3Y8" rel="noopener noreferrer" target="_blank">
+            Book a free consultation.
+          </a>
+        </Button>
       </div>
       <figure class="hidden lg:block">
         <img
